@@ -21,6 +21,164 @@
  */
 #pragma once
 
+/**
+ * Marlin compile version identifier
+ */
+#define COMPILE_VERSION "10" 
+
+/*******************************************************************************************************
+ * Vx  mm/dd/YY 19:00 24HR
+ * 
+ * V10 10/08/20 xx:xx
+ *      #define JUNCTION_DEVIATION_MM 0.03
+ *      #define LIN_ADVANCE_K 0.02
+ * 
+ * V09 10/08/20 15:15
+ *      #define LIN_ADVANCE_K 0.07
+ *      #define DEFAULT_MAX_ACCELERATION      { 150, 150, 50, 9000 }  
+ *      #define TEMP_SENSOR_0 1
+ *      #define PRINTJOB_TIMER_AUTOSTART
+ *          ** DUE to: Print Job Timer auto start, MUST send M77 at job end-gcode script.
+ *      Z_CURRENT       850
+ * 
+ * V08 10/08/20 13:38
+ *      #define DETECT_BROKEN_ENDSTOP
+ 
+ *      #define E0_CURRENT      1000
+ *      #define X_CURRENT       640 
+ *      #define Y_CURRENT       640
+ *      #define Z_CURRENT       1000
+ *  
+ *      M92 X80.00 Y80.00 Z400.00 E102.3
+ 
+ *      #define DEFAULT_MAX_ACCELERATION      { 150, 150, 100, 9000 }
+ *      #define DEFAULT_MAX_FEEDRATE          { 1000, 1000, 12, 500 }
+  * 
+ * V07 10/08/20 13:06
+ *      #define HOMING_BACKOFF_POST_MM { 2, 2, 2 }
+ *      M92 X80.00 Y80.00 Z400.00 E110
+ *      #define HEATER_0_MAXTEMP 300
+ *      #define TEMP_SENSOR_0 5
+ *      #define TEMP_SENSOR_BED 5
+ * 
+ * V06  10/08/20 11:03
+ *      // BED PID TUNE 10/08/2020 // M303 E-1 S60 C10 U1
+ *      #define DEFAULT_bedKp 178.17
+ *      #define DEFAULT_bedKi 34.70
+ *      #define DEFAULT_bedKd 609.93
+ * 
+ * V05  10/08/20 10:49
+ *      PID BED Tune: Store to firmware
+ *      // M303 E-1 S60 C15 U1 
+ *          Kp: 67.36 Ki: 13.13 Kd: 230.43
+ *      REMOVED: #define SLOW_PWM_HEATERS 
+  * 
+ * V04  10/08/20 10:14
+ *      PID Extruder Tune: Store to firmware
+ *          // 303 E0 C15 S225 U1
+ * 
+ *          Recv: #define DEFAULT_Kp 33.95
+ *          Recv: #define DEFAULT_Ki 3.26
+ *          Recv: #define DEFAULT_Kd 88.45
+ * 
+ *      Enabled BED PID
+ *       #define PIDTEMPBED
+ *       #define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu.
+ *       #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu.
+ *       #define SLOW_PWM_HEATERS
+ * 
+ * V03  10/08/20 09:40
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 102.3 }
+ *      #define LED_CONTROL_MENU
+ *      define LCD_TIMEOUT_TO_STATUS 60000
+ *      #define BOOTSCREEN_TIMEOUT 1000 
+ *      #define SHOW_REMAINING_TIME       // Display estimated time to completion
+ *      #define USE_M73_REMAINING_TIME  // Use remaining time from M73 command instead of estimation
+ *      #define ROTATE_PROGRESS_DISPLAY // Display (P)rogress, (E)lapsed, and (R)emaining time
+ *      #define PRINT_PROGRESS_SHOW_DECIMALS // Show progress with decimal digits
+ *      #define SD_ABORT_NO_COOLDOWN
+ *      #define XYZ_NO_FRAME
+ *      //#define MENU_HOLLOW_FRAME
+ *      #define STATUS_FAN_FRAMES 3       // :[0,1,2,3,4] Number of fan animation frames
+ *      #define STATUS_HEAT_PERCENT       // Show heating in a progress bar
+ *      #define LIN_ADVANCE_K 0.05  
+ *      //#define EXPERIMENTAL_SCURVE
+ *      //#define S_CURVE_ACCELERATION
+ *      #define PINS_DEBUGGING
+ * 
+ * 
+ * V02  10/08/20 09:11
+ *      Custom Version File updates ( version, boot and status )
+ *      Part Cooling Fan: FAN_PIN   (PC6)
+ *      Extruder Auto Cooling Fan:  FAN1_PIN (PC7)
+ * 
+ *      // diabled #error about NEO not supported on STM
+ *      // replacing Adadfruit_NeoPixel@1.5 with https://github.com/bigtreetech/Adafruit_NeoPixel
+ *      #define NEOPIXEL_LED
+ *      #define NEOPIXEL_PIXELS 15 
+ * 
+ *      #define FAN_SOFT_PWM
+ *      #define SOFT_PWM_SCALE 0
+ * 
+ * 
+ * V01  10/08/20 08:24
+ * 		Initial - Bootable
+ *      *** FORKED marlin/bugfix-2.0.x to github.com/kamikazeBDM/Marlin-SKR-Mini-E3-V2.0 ***
+ * 
+ *******************************************************************************************************/
+
+
+#define SHORT_BUILD_VERSION "bugfix-2.0.7-" COMPILE_VERSION
+
+/**
+ * Verbose version identifier which should contain a reference to the location
+ * from where the binary was downloaded or the source code was compiled.
+ */
+#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION
+
+/**
+ * The STRING_DISTRIBUTION_DATE represents when the binary file was built,
+ * here we define this default string as the date where the latest release
+ * version was tagged.
+ */
+#define STRING_DISTRIBUTION_DATE  __DATE__ " " __TIME__
+
+/**
+ * Defines a generic printer name to be output to the LCD after booting Marlin.
+ */
+#define MACHINE_NAME "SKR Mini-E3-V2"
+
+/**
+ * The SOURCE_CODE_URL is the location where users will find the Marlin Source
+ * Code which is installed on the device. In most cases —unless the manufacturer
+ * has a distinct Github fork— the Source Code URL should just be the main
+ * Marlin repository.
+ */
+#define SOURCE_CODE_URL "https://github.com/MarlinFirmware/Marlin"
+
+/**
+ * Default generic printer UUID.
+ */
+#define DEFAULT_MACHINE_UUID "cede2a2f-41a2-4748-9b12-c55c62f367ff"
+
+/**
+ * The WEBSITE_URL is the location where users can get more information such as
+ * documentation about a specific Marlin release.
+ */
+#define WEBSITE_URL "https://marlinfw.org"
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////
 // VENDOR VERSION EXAMPLE //
 ////////////////////////////
