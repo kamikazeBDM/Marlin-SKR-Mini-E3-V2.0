@@ -24,12 +24,15 @@
 /**
  * Marlin compile version identifier
  */
-#define COMPILE_VERSION "13" 
+#define COMPILE_VERSION "14" 
 
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:MM 24HR
  * 
- * V13 10/10/20 19:15
+ * V14 10/11/20 07:45
+ *      
+ * 
+ * V13 10/10/20 19:31
  *      #define CASE_LIGHT_ENABLE
  *      #define CASE_LIGHT_USE_NEOPIXEL
  *      Adafruit NeoPixel=https://github.com/ccccmagicboy/Adafruit_NeoPixel#meeb_3dp_us
