@@ -24,13 +24,30 @@
 /**
  * Marlin compile version identifier
  */
-#define COMPILE_VERSION "14" 
+#define COMPILE_VERSION "16" 
 
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:MM 24HR
  * 
- * V14 10/11/20 07:45
- *      
+ * V16 10/11/20 xx:xx
+ * 
+ * V15 10/11/20 11:55
+ *      #define NEOPIXEL_PIXELS 15
+ * 
+ * V14 10/11/20 10:02
+ * 
+ *      ********************************************************************************************
+ *                                   N E O    P I X E L !!
+ *      *** WORKING ****
+ *      ********************************************************************************************
+ * 
+ *      NEOPIXEL_LED            = https://github.com/bigtreetech/Adafruit_NeoPixel
+ *      NEO PIXEL port (PA8) doesnt work.
+ *      ** USE PS-ON port PC13 **
+ *          #define NEOPIXEL_PIN     PC13       // LED driving pin
+ *      REMOVED:  #define NEOPIXEL_BKGD_LED_INDEX  2
+ * 
+ * 
  * 
  * V13 10/10/20 19:31
  *      #define CASE_LIGHT_ENABLE
@@ -47,9 +64,6 @@
  *      #define JUNCTION_DEVIATION_MM 0.01
  *      #define LIN_ADVANCE_K 0.30
  *      Merge fixes with upstream bugfix-2.0.x
- * 
- *      ********************************************************************************************
- *                                   N E O    P I X E L !!
  * 
  *      CHANGED: to NEOPIXEL_LED  = https://github.com/CommandoreBombardiero/Adafruit_NeoPixel
  *      ** NOTE ** : I changed .pio\libdeps\STM32F103RC_btt_512K\Adafruit NeoPixel\Adafruit_NeoPixel.cpp 
