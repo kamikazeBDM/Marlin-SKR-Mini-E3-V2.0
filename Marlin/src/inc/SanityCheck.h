@@ -422,7 +422,7 @@
 #elif defined(CHAMBER_HEATER_PIN)
   #error "CHAMBER_HEATER_PIN is now HEATER_CHAMBER_PIN. Please update your configuration and/or pins."
 #elif defined(TMC_Z_CALIBRATION)
-  #error "TMC_Z_CALIBRATION has been deprecated in favor of Z_STEPPER_AUTO_ALIGN. Please update your configuration."
+  #error "TMC_Z_CALIBRATION has been deprecated in favor of MECHANICAL_GANTRY_CALIBRATION. Please update your configuration."
 #elif defined(Z_MIN_PROBE_ENDSTOP)
   #error "Z_MIN_PROBE_ENDSTOP is no longer required. Please remove it from Configuration.h."
 #elif defined(DUAL_NOZZLE_DUPLICATION_MODE)
@@ -1845,6 +1845,10 @@ static_assert(hbm[Z_AXIS] >= 0, "HOMING_BUMP_MM.Z must be greater than or equal 
   #error "TEMP_SENSOR_1 is required with TEMP_SENSOR_1_AS_REDUNDANT."
 #endif
 
+#if ENABLED(MAX6675_IS_MAX31865) && (!defined(MAX31865_SENSOR_OHMS) || !defined(MAX31865_CALIBRATION_OHMS))
+  #error "MAX31865_SENSOR_OHMS and MAX31865_CALIBRATION_OHMS must be set in Configuration.h when using a MAX31865 temperature sensor."
+#endif
+
 /**
  * Test Heater, Temp Sensor, and Extruder Pins
  */
@@ -2785,6 +2789,21 @@ static_assert(   _ARR_TEST(3,0) && _ARR_TEST(3,1) && _ARR_TEST(3,2)
     #error "Z_STEPPER_AUTO_ALIGN requires a Z-bed probe."
   #elif ENABLED(Z_STEPPER_ALIGN_KNOWN_STEPPER_POSITIONS) && NUM_Z_STEPPER_DRIVERS < 3
     #error "Z_STEPPER_ALIGN_KNOWN_STEPPER_POSITIONS requires NUM_Z_STEPPER_DRIVERS to be 3 or 4."
+  #endif
+#endif
+
+#if ENABLED(MECHANICAL_GANTRY_CALIBRATION)
+  #if NONE(HAS_MOTOR_CURRENT_DAC, HAS_MOTOR_CURRENT_SPI, HAS_MOTOR_CURRENT_DAC, HAS_TRINAMIC_CONFIG, HAS_MOTOR_CURRENT_PWM)
+    #error "It is highly recommended to have adjustable current drivers to prevent damage. Disable this line to continue anyway."
+  #elif !defined(GANTRY_CALIBRATION_CURRENT)
+    #error "MECHANICAL_GANTRY_CALIBRATION Requires GANTRY_CALIBRATION_CURRENT to be set."
+  #elif !defined(GANTRY_CALIBRATION_EXTRA_HEIGHT)
+    #error "MECHANICAL_GANTRY_CALIBRATION Requires GANTRY_CALIBRATION_EXTRA_HEIGHT to be set."
+  #elif !defined(GANTRY_CALIBRATION_FEEDRATE)
+    #error "MECHANICAL_GANTRY_CALIBRATION Requires GANTRY_CALIBRATION_FEEDRATE to be set."
+  #endif
+  #if defined(GANTRY_CALIBRATION_SAFE_POSITION) && !defined(GANTRY_CALIBRATION_XY_PARK_FEEDRATE)
+    #error "GANTRY_CALIBRATION_SAFE_POSITION Requires GANTRY_CALIBRATION_XY_PARK_FEEDRATE to be set."
   #endif
 #endif
 
