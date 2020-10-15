@@ -447,8 +447,6 @@
   #error "POWER_SUPPLY is now obsolete. Please remove it from Configuration.h."
 #elif defined(MKS_ROBIN_TFT)
   #error "MKS_ROBIN_TFT is now FSMC_GRAPHICAL_TFT. Please update your configuration."
-#elif defined(TFT_LVGL_UI)
-  #error "TFT_LVGL_UI is now TFT_LVGL_UI_FSMC. Please update your configuration."
 #elif defined(SDPOWER)
   #error "SDPOWER is now SDPOWER_PIN. Please update your configuration and/or pins."
 #elif defined(STRING_SPLASH_LINE1) || defined(STRING_SPLASH_LINE2)
@@ -535,6 +533,8 @@
   #error "ANYCUBIC_TFT_MODEL is now ANYCUBIC_LCD_I3MEGA. Please update your Configuration.h."
 #elif defined(EVENT_GCODE_SD_STOP)
   #error "EVENT_GCODE_SD_STOP is now EVENT_GCODE_SD_ABORT. Please update your Configuration.h."
+#elif defined(GRAPHICAL_TFT_ROTATE_180)
+  #error "GRAPHICAL_TFT_ROTATE_180 is now TFT_ROTATION set to TFT_ROTATE_180. Please update your Configuration.h."
 #elif defined(FIL_RUNOUT_INVERTING)
   #if FIL_RUNOUT_INVERTING
     #error "FIL_RUNOUT_INVERTING true is now FIL_RUNOUT_STATE HIGH. Please update your Configuration.h."
@@ -582,7 +582,7 @@
 /**
  * Serial
  */
-#if !IS_AT90USB
+#if !(defined(__AVR__) && defined(USBCON))
   #if ENABLED(SERIAL_XON_XOFF) && RX_BUFFER_SIZE < 1024
     #error "SERIAL_XON_XOFF requires RX_BUFFER_SIZE >= 1024 for reliable transfers without drops."
   #elif RX_BUFFER_SIZE && (RX_BUFFER_SIZE < 2 || !IS_POWER_OF_2(RX_BUFFER_SIZE))
@@ -2108,9 +2108,9 @@ static_assert(hbm[Z_AXIS] >= 0, "HOMING_BUMP_MM.Z must be greater than or equal 
 #endif
 
 /**
- * Emergency Command Parser
+ * emergency-command parser
  */
-#if BOTH(IS_AT90USB, EMERGENCY_PARSER)
+#if ENABLED(EMERGENCY_PARSER) && defined(__AVR__) && defined(USBCON)
   #error "EMERGENCY_PARSER does not work on boards with AT90USB processors (USBCON)."
 #endif
 
@@ -2805,6 +2805,10 @@ static_assert(   _ARR_TEST(3,0) && _ARR_TEST(3,1) && _ARR_TEST(3,2)
   #if defined(GANTRY_CALIBRATION_SAFE_POSITION) && !defined(GANTRY_CALIBRATION_XY_PARK_FEEDRATE)
     #error "GANTRY_CALIBRATION_SAFE_POSITION Requires GANTRY_CALIBRATION_XY_PARK_FEEDRATE to be set."
   #endif
+#endif
+
+#if BOTH(Z_STEPPER_AUTO_ALIGN, MECHANICAL_GANTRY_CALIBRATION)
+  #error "You cannot use Z_STEPPER_AUTO_ALIGN and MECHANICAL_GANTRY_CALIBRATION at the same time."
 #endif
 
 #if ENABLED(PRINTCOUNTER) && DISABLED(EEPROM_SETTINGS)
