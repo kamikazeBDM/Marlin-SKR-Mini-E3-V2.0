@@ -24,12 +24,18 @@
 /**
  * Marlin compile version identifier
  */
-#define COMPILE_VERSION "16" 
+#define COMPILE_VERSION "17" 
 
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:MM 24HR
+
+ * V17 10/15/20 xx:xx
+ *   
  * 
- * V16 10/11/20 xx:xx
+ * V16 10/15/20 18:06
+ *      Sync to GitHub bugfix-2.0.x
+ *      Sync settings to firmware
+ *      INSTALLED: E3D V6 head with volcano heat block - .08mm nozzle / 50w heater
  * 
  * V15 10/11/20 11:55
  *      #define NEOPIXEL_PIXELS 15
