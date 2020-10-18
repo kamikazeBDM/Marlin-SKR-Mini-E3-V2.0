@@ -1404,6 +1404,12 @@
     #endif
   #endif
 
+
+
+
+
+
+
   /**
    * Status (Info) Screen customizations
    * These options may affect code size and screen render time.
@@ -1421,7 +1427,7 @@
   #define STATUS_FAN_FRAMES 3       // :[0,1,2,3,4] Number of fan animation frames
   #define STATUS_HEAT_PERCENT       // Show heating in a progress bar
   //#define BOOT_MARLIN_LOGO_SMALL    // Show a smaller Marlin logo on the Boot Screen (saving 399 bytes of flash)
-  //#define BOOT_MARLIN_LOGO_ANIMATED // Animated Marlin logo. Costs ~‭3260 (or ~940) bytes of PROGMEM.
+  #define BOOT_MARLIN_LOGO_ANIMATED // Animated Marlin logo. Costs ~‭3260 (or ~940) bytes of PROGMEM.
 
   // Frivolous Game Options
   //#define MARLIN_BRICKOUT
@@ -1430,6 +1436,19 @@
   //#define GAMES_EASTER_EGG          // Add extra blank lines above the "Games" sub-menu
 
 #endif // HAS_MARLINUI_U8GLIB
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //
 // Additional options for DGUS / DWIN displays
@@ -1652,9 +1671,9 @@
 #define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
-  #define LIN_ADVANCE_K 0.    // Unit: mm compression per 1mm/s extruder speed
+  #define LIN_ADVANCE_K 0.07    // Unit: mm compression per 1mm/s extruder speed
   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
-  //#define EXPERIMENTAL_SCURVE   // Enable this option to permit S-Curve Acceleration
+  #define EXPERIMENTAL_SCURVE   // Enable this option to permit S-Curve Acceleration
 #endif
 
 // @section leveling
@@ -2878,6 +2897,10 @@
   #endif
 #endif
 
+
+
+
+
 /**
  * Spindle & Laser control
  *
@@ -3026,6 +3049,10 @@
   #endif
 #endif
 
+
+
+
+
 /**
  * Coolant Control
  *
@@ -3074,6 +3101,9 @@
   //#define FILAMENT_LCD_DISPLAY
 #endif
 
+
+
+
 /**
  * Power Monitor
  * Monitor voltage (V) and/or current (A), and -when possible- power (W)
@@ -3105,12 +3135,16 @@
  */
 #define AUTO_REPORT_TEMPERATURES
 
+
+
+
+
 /**
  * Include capabilities in M115 output
  */
 #define EXTENDED_CAPABILITIES_REPORT
 #if ENABLED(EXTENDED_CAPABILITIES_REPORT)
-  //#define M115_GEOMETRY_REPORT
+  #define M115_GEOMETRY_REPORT
 #endif
 
 /**
@@ -3119,6 +3153,14 @@
  * M16 with a non-matching string causes the printer to halt.
  */
 //#define EXPECTED_PRINTER_CHECK
+
+
+
+
+
+
+
+
 
 /**
  * Disable all Volumetric extrusion options
@@ -3148,6 +3190,11 @@
   #endif
 #endif
 
+
+
+
+
+
 /**
  * Enable this option for a leaner build of Marlin that removes all
  * workspace offsets, simplifying coordinate transformations, leveling, etc.
@@ -3163,6 +3210,10 @@
 //#define M114_LEGACY         // M114 used to synchronize on every call. Enable if needed.
 
 //#define REPORT_FAN_CHANGE   // Report the new fan speed when changed by M106 (and others)
+
+
+
+
 
 /**
  * Set the number of proportional font spaces required to fill up a typical character space.
@@ -3182,7 +3233,11 @@
   //#define GCODE_QUOTED_STRINGS  // Support for quoted string parameters
 #endif
 
-//#define GCODE_CASE_INSENSITIVE  // Accept G-code sent to the firmware in lowercase
+
+
+
+
+#define GCODE_CASE_INSENSITIVE  // Accept G-code sent to the firmware in lowercase
 
 //#define REPETIER_GCODE_M360     // Add commands originally from Repetier FW
 
@@ -3200,6 +3255,10 @@
 #ifdef G0_FEEDRATE
   //#define VARIABLE_G0_FEEDRATE // The G0 feedrate is set by F in G0 motion mode
 #endif
+
+
+
+
 
 /**
  * Startup commands
@@ -3219,6 +3278,12 @@
   #define GCODE_MACROS_SLOTS       5  // Up to 10 may be used
   #define GCODE_MACROS_SLOT_SIZE  50  // Maximum length of a single macro
 #endif
+
+
+
+
+
+
 
 /**
  * User-defined menu items that execute custom GCode
@@ -3266,6 +3331,12 @@
   //#define HOST_START_MENU_ITEM  // Add a menu item that tells the host to start
 #endif
 
+
+
+
+
+
+
 /**
  * Cancel Objects
  *
@@ -3285,6 +3356,12 @@
  *
  * Reliabuild encoders have been modified to improve reliability.
  */
+
+
+
+
+
+
 
 //#define I2C_POSITION_ENCODERS
 #if ENABLED(I2C_POSITION_ENCODERS)
