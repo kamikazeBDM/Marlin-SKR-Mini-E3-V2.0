@@ -21,16 +21,30 @@
  */
 #pragma once
 
-/**
- * Marlin compile version identifier
- */
-#define COMPILE_VERSION "17" 
+/*************************************
+ * Marlin bugfix-2.0.x
+ * Compiled version identifier
+ ************************************/
+#define COMPILE_VERSION "18" 
+
+#define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
+#define STRING_CONFIG_H_AUTHOR "(JAM)" // Who made the changes.
+#define MACHINE_NAME "SKR Mini-E3-V2"
+#define CUSTOM_MACHINE_NAME "3863 CR-10S"
 
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:MM 24HR
-
- * V17 10/15/20 xx:xx
- *   
+ * 
+ * V18 10/17/20 08:27
+ *      #define GCODE_CASE_INSENSITIV
+ *      #define M115_GEOMETRY_REPORT
+ *      #define BOOT_MARLIN_LOGO_ANIMATED
+ * 
+ * V17 10/17/20 07:54
+ *      upstream bugfix-2.0.x updates
+ *      CONFIGURATION_H_VERSION 020008
+ *      Tag 2.0.7.2
+ *      0.60mm nozzle - second ( left ) 12V 5015 fan installed.
  * 
  * V16 10/15/20 18:06
  *      Sync to GitHub bugfix-2.0.x
@@ -174,7 +188,6 @@
  *******************************************************************************************************/
 
 
-#define SHORT_BUILD_VERSION "bugfix-2.0.7-" COMPILE_VERSION
 
 /**
  * Verbose version identifier which should contain a reference to the location
@@ -189,10 +202,6 @@
  */
 #define STRING_DISTRIBUTION_DATE  __DATE__ " " __TIME__
 
-/**
- * Defines a generic printer name to be output to the LCD after booting Marlin.
- */
-#define MACHINE_NAME "SKR Mini-E3-V2"
 
 /**
  * The SOURCE_CODE_URL is the location where users will find the Marlin Source
