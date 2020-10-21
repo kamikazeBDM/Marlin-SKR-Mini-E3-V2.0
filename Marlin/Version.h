@@ -25,7 +25,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "18" 
+#define COMPILE_VERSION "20" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "(JAM)" // Who made the changes.
@@ -35,10 +35,34 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:MM 24HR
  * 
- * V18 10/17/20 08:27
+ * V20 10/18/20 xx:xx
+ * 
+ * 
+ * V19 10/18/20 10:42
+ *      #define LIN_ADVANCE_K 0.03
+ *      M204 P1500.00 R1500.00 T1500.00
+ *      M201 X5000.00 Y5000.00 Z125.00 E9000.00
+ *      M203 X500.00 Y500.00 Z12.00 E500.00
+ *      M92 X80.30 Y80.45 Z400.00 E98.10
+ *      M301 P19.69 I1.90 D50.92
+ *      M304 P178.17 I34.70 D609.93
+ *      M906 X750 Y750 Z900
+ *      M906 T0 E800
+ *      M205 B20000.00 S0.00 T0.00 J0.01
+ *      
+ *      #define JUNCTION_DEVIATION_MM 0.015
+ *      #define BACKLASH_COMPENSATION
+ *      #define Z_HOMING_HEIGHT  4
+ *      #define Z_MAX_POS 350
+ *      #define MIN_SOFTWARE_ENDSTOPS
+ *      #define SOFT_ENDSTOPS_MENU_ITEM
+ *         
+ * 
+ * V18 10/18/20 08:25
  *      #define GCODE_CASE_INSENSITIV
  *      #define M115_GEOMETRY_REPORT
  *      #define BOOT_MARLIN_LOGO_ANIMATED
+ *      #define S_CURVE_ACCELERATION
  * 
  * V17 10/17/20 07:54
  *      upstream bugfix-2.0.x updates
