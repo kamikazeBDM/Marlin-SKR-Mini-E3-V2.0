@@ -183,4 +183,6 @@ cmake-build-*
 
 #Python
 __pycache__
-VISUAL-STUDIO.code-workspace
+
+#IOLogger logs
+*_log.csv
