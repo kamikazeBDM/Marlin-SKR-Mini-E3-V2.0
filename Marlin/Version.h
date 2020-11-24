@@ -25,25 +25,30 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "22" 
+#define COMPILE_VERSION "23" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "(JAM)" // Who made the changes.
 #define MACHINE_NAME "SKR Mini-E3-V2"
 #define CUSTOM_MACHINE_NAME "3863 CR-10S"
 
+
 /*******************************************************************************************************
  * Vx  mm/dd/YY HH:MM 24HR
-
- * V22 12/xx/20 xx:xx
  * 
- * V21 11/31/20 10:07
- *      upstream fixes
+ * V23 11/xx/20 xx:xx
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/23/2020
+ *      
+ * V22 11/23/20 12:29
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  11/22/2020
+ *  
+ * V21 10/31/20 10:07
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  10/31/2020
  * 		!! FAST_PWM support added for STM32F1  !!
  *		#define FAST_PWM_FAN
  *	
  * V20 10/28/20 17:28
- *      upstream fixes
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  10/28/2020
  * 
  * V19 10/18/20 10:42
  *      #define LIN_ADVANCE_K 0.03

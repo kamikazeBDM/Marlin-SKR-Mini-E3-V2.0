@@ -110,6 +110,10 @@
  */
 #define SERIAL_PORT 2
 
+
+
+
+
 /**
  * Select a secondary serial port on the board to use for communication with the host.
  * Currently Ethernet (-2) is only supported on Teensy 4.1 boards.
