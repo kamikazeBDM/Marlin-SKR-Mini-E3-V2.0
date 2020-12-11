@@ -34,23 +34,23 @@
 
 
 /*******************************************************************************************************
- * Vx  mm/dd/YY HH:MM 24HR
- * 
- * V23 11/xx/20 xx:xx
- *      UPDATES: MARLIN upstream bugfix-2.0.x  11/23/2020
+ * Vx  mm/dd/YYYY HH:MM 24HR
+
+ * V23 12/11/2020 10:15
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/11/2020
  *      
- * V22 11/23/20 12:29
+ * V22 11/23/2020 12:29
  *      UPDATES: MARLIN upstream bugfix-2.0.x  11/22/2020
  *  
- * V21 10/31/20 10:07
+ * V21 10/31/2020 10:07
  *      UPDATES: MARLIN upstream bugfix-2.0.x  10/31/2020
  * 		!! FAST_PWM support added for STM32F1  !!
  *		#define FAST_PWM_FAN
  *	
- * V20 10/28/20 17:28
+ * V20 10/28/2020 17:28
  *      UPDATES: MARLIN upstream bugfix-2.0.x  10/28/2020
  * 
- * V19 10/18/20 10:42
+ * V19 10/18/2020 10:42
  *      #define LIN_ADVANCE_K 0.03
  *      M204 P1500.00 R1500.00 T1500.00
  *      M201 X5000.00 Y5000.00 Z125.00 E9000.00
@@ -70,27 +70,27 @@
  *      #define SOFT_ENDSTOPS_MENU_ITEM
  *         
  * 
- * V18 10/18/20 08:25
+ * V18 10/18/2020 08:25
  *      #define GCODE_CASE_INSENSITIV
  *      #define M115_GEOMETRY_REPORT
  *      #define BOOT_MARLIN_LOGO_ANIMATED
  *      #define S_CURVE_ACCELERATION
  * 
- * V17 10/17/20 07:54
+ * V17 10/17/2020 07:54
  *      upstream bugfix-2.0.x updates
  *      CONFIGURATION_H_VERSION 020008
  *      Tag 2.0.7.2
  *      0.60mm nozzle - second ( left ) 12V 5015 fan installed.
  * 
- * V16 10/15/20 18:06
+ * V16 10/15/2020 18:06
  *      Sync to GitHub bugfix-2.0.x
  *      Sync settings to firmware
  *      INSTALLED: E3D V6 head with volcano heat block - .08mm nozzle / 50w heater
  * 
- * V15 10/11/20 11:55
+ * V15 10/11/2020 11:55
  *      #define NEOPIXEL_PIXELS 15
  * 
- * V14 10/11/20 10:02
+ * V14 10/11/2020 10:02
  * 
  *      ********************************************************************************************
  *                                   N E O    P I X E L !!
@@ -105,18 +105,18 @@
  * 
  * 
  * 
- * V13 10/10/20 19:31
+ * V13 10/10/2020 19:31
  *      #define CASE_LIGHT_ENABLE
  *      #define CASE_LIGHT_USE_NEOPIXEL
  *      Adafruit NeoPixel=https://github.com/ccccmagicboy/Adafruit_NeoPixel#meeb_3dp_us
  * 
- * V12 10/10/20 18:05
+ * V12 10/10/2020 18:05
  *      #define NEOPIXEL_TYPE   NEO_GRB + NEO_KHZ800 
  * 
- * V11 10/10/20 17:51
+ * V11 10/10/2020 17:51
  *      #define NEOPIXEL_PIN     PA8       // LED driving pin
  * 
- * V10 10/10/20 17:33
+ * V10 10/10/2020 17:33
  *      #define JUNCTION_DEVIATION_MM 0.01
  *      #define LIN_ADVANCE_K 0.30
  *      Merge fixes with upstream bugfix-2.0.x
@@ -129,7 +129,7 @@
  * 
  *      ********************************************************************************************
  * 
- * V09 10/09/20 15:15
+ * V09 10/09/2020 15:15
  *      #define LIN_ADVANCE_K 0.07
  *      #define DEFAULT_MAX_ACCELERATION      { 150, 150, 50, 9000 }  
  *      #define TEMP_SENSOR_0 1
@@ -137,7 +137,7 @@
  *          ** DUE to: Print Job Timer auto start, MUST send M77 at job end-gcode script.
  *      Z_CURRENT       850
  * 
- * V08 10/09/20 13:38
+ * V08 10/09/2020 13:38
  *      #define DETECT_BROKEN_ENDSTOP
  
  *      #define E0_CURRENT      1000
@@ -150,26 +150,26 @@
  *      #define DEFAULT_MAX_ACCELERATION      { 150, 150, 100, 9000 }
  *      #define DEFAULT_MAX_FEEDRATE          { 1000, 1000, 12, 500 }
   * 
- * V07 10/09/20 13:06
+ * V07 10/09/2020 13:06
  *      #define HOMING_BACKOFF_POST_MM { 2, 2, 2 }
  *      M92 X80.00 Y80.00 Z400.00 E110
  *      #define HEATER_0_MAXTEMP 300
  *      #define TEMP_SENSOR_0 5
  *      #define TEMP_SENSOR_BED 5
  * 
- * V06  10/09/20 11:03
+ * V06  10/09/2020 11:03
  *      // BED PID TUNE 10/08/2020 // M303 E-1 S60 C10 U1
  *      #define DEFAULT_bedKp 178.17
  *      #define DEFAULT_bedKi 34.70
  *      #define DEFAULT_bedKd 609.93
  * 
- * V05  10/09/20 10:49
+ * V05  10/09/2020 10:49
  *      PID BED Tune: Store to firmware
  *      // M303 E-1 S60 C15 U1 
  *          Kp: 67.36 Ki: 13.13 Kd: 230.43
  *      REMOVED: #define SLOW_PWM_HEATERS 
   * 
- * V04  10/09/20 10:14
+ * V04  10/09/2020 10:14
  *      PID Extruder Tune: Store to firmware
  *          // 303 E0 C15 S225 U1
  * 
@@ -183,7 +183,7 @@
  *       #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu.
  *       #define SLOW_PWM_HEATERS
  * 
- * V03  10/09/20 09:40
+ * V03  10/09/2020 09:40
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 102.3 }
  *      #define LED_CONTROL_MENU
  *      define LCD_TIMEOUT_TO_STATUS 60000
@@ -203,7 +203,7 @@
  *      #define PINS_DEBUGGING
  * 
  * 
- * V02  10/09/20 09:11
+ * V02  10/09/2020 09:11
  *      Custom Version File updates ( version, boot and status )
  *      Part Cooling Fan: FAN_PIN   (PC6)
  *      Extruder Auto Cooling Fan:  FAN1_PIN (PC7)
@@ -217,7 +217,7 @@
  *      #define SOFT_PWM_SCALE 0
  * 
  * 
- * V01  10/09/20 08:24
+ * V01  10/09/2020 08:24
  * 		Initial - Bootable
  *      *** FORKED marlin/bugfix-2.0.x to github.com/kamikazeBDM/Marlin-SKR-Mini-E3-V2.0 ***
  * 
