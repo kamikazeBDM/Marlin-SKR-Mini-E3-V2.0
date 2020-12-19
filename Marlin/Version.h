@@ -36,9 +36,33 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:MM 24HR
  * 
- * V24 12/xx/2020 xx:xx
- *      UPDATES: MARLIN upstream bugfix-2.0.x  12/17/2020
+ * V25 12/xx/2020 xx:xx
+ *      
+ *      
+ *      
+ * V24 12/20/2020 09:26
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/20/2020
+ *      define FILAMENT_CHANGE_FAST_LOAD_LENGTH   175 
+ *      #define DEFAULT_MAX_FEEDRATE          { 150, 150, 12, 350 }
+ *      #define DEFAULT_MAX_ACCELERATION      { 700, 700, 100, 5000 }
+ *      #define DEFAULT_ACCELERATION          350    // X, Y, Z and E acceleration for printing moves
+ *      #define DEFAULT_RETRACT_ACCELERATION  350    // E acceleration for retracts
+ *      #define DEFAULT_TRAVEL_ACCELERATION   350    // X, Y, Z acceleration for travel (non printing) moves
+ *      #define LED_USER_PRESET_RGB    255 // define to WHITE
+ *      #define XY_FREQUENCY_LIMIT      10 
+ *      DISABLED:   //#define BACKLASH_COMPENSATION 
+ *      DISABLED:   //#define SD_ABORT_ON_ENDSTOP_HIT
+ *      #define ARC_SUPPORT 
+ *      #define BEZIER_CURVE_SUPPORT
+ *      
+ *      #define DIRECT_STEPPING 
+ *          REMOVED: //#define LIN_ADVANCE
  * 
+ *      #define TX_BUFFER_SIZE 4
+ *      #define BAUDRATE 250000
+ *      DISABLED: //#define S_CURVE_ACCELERATION
+ *      
+ *      
  * V23 12/11/2020 10:15
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/11/2020
  *      
