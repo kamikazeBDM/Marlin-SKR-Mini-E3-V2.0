@@ -25,7 +25,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "24" 
+#define COMPILE_VERSION "25" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "(JAM)" // Who made the changes.
@@ -37,11 +37,12 @@
  * Vx  mm/dd/YYYY HH:MM 24HR
  * 
  * V25 12/xx/2020 xx:xx
- *      
- *      
- *      
- * V24 12/20/2020 09:26
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/20/2020
+ *      RE-ADDED: #define LIN_ADVANCE_K 0.00
+ *      RE-ADDED: #define S_CURVE_ACCELERATION
+ *      REMVOED:  //#define DIRECT_STEPPING 
+ * V24 12/19/2020 09:26
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  12/19/2020
  *      define FILAMENT_CHANGE_FAST_LOAD_LENGTH   175 
  *      #define DEFAULT_MAX_FEEDRATE          { 150, 150, 12, 350 }
  *      #define DEFAULT_MAX_ACCELERATION      { 700, 700, 100, 5000 }
@@ -55,7 +56,7 @@
  *      #define ARC_SUPPORT 
  *      #define BEZIER_CURVE_SUPPORT
  *      
- *      #define DIRECT_STEPPING 
+ *      ADDED: #define DIRECT_STEPPING 
  *          REMOVED: //#define LIN_ADVANCE
  * 
  *      #define TX_BUFFER_SIZE 4
