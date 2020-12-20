@@ -36,11 +36,18 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:MM 24HR
  * 
- * V25 12/xx/2020 xx:xx
+ * V25 12/20/2020 12:42
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/20/2020
  *      RE-ADDED: #define LIN_ADVANCE_K 0.00
  *      RE-ADDED: #define S_CURVE_ACCELERATION
  *      REMVOED:  //#define DIRECT_STEPPING 
+ *      #define DEFAULT_ACCELERATION          600    // X, Y, Z and E acceleration for printing moves
+ *      #define DEFAULT_RETRACT_ACCELERATION  500    // E acceleration for retracts
+ *      #define DEFAULT_TRAVEL_ACCELERATION   500    // X, Y, Z acceleration for travel (non printing) moves* 
+ *      #define JUNCTION_DEVIATION_MM 0.04 
+ *      ADDED:   #define HYBRID_THRESHOLD
+ *      #define HOMING_FEEDRATE_MM_M { (85*60), (85*60), (8*60) }
+ * 
  * V24 12/19/2020 09:26
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/19/2020
  *      define FILAMENT_CHANGE_FAST_LOAD_LENGTH   175 
