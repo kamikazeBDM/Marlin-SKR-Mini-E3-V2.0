@@ -25,7 +25,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "25" 
+#define COMPILE_VERSION "26" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "(JAM)" // Who made the changes.
@@ -35,6 +35,14 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:MM 24HR
+ * 
+ * V26 01/02/2021 16:04
+ *      UPDATES: MARLIN upstream bugfix-2.0.x  01/03/2021
+ *      - FORKED a copy to MORDOR
+ *      REMOVED: #define CASE_LIGHT_ENABLE
+ *      
+ *      *** GET USER SETTINGS FROM M503 BEFORE COMPILING!! ***
+ * 
  * 
  * V25 12/20/2020 12:42
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/20/2020
