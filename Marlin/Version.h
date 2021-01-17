@@ -36,13 +36,10 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:MM 24HR
  * 
- * V26 01/02/2021 16:04
- *      UPDATES: MARLIN upstream bugfix-2.0.x  01/03/2021
- *      - FORKED a copy to MORDOR
+ * V26 01/16/2021 12:14
+ *      UPDATES: MARLIN upst4eam bugfix-2.0.x  01/16/2021
  *      REMOVED: #define CASE_LIGHT_ENABLE
- *      
- *      *** GET USER SETTINGS FROM M503 BEFORE COMPILING!! ***
- * 
+ *      Sync'd settings frrom printer in to config.
  * 
  * V25 12/20/2020 12:42
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/20/2020

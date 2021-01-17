@@ -2350,7 +2350,7 @@
  */
 #if HAS_TRINAMIC_CONFIG
 
-  #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
+  #define HOLD_MULTIPLIER    0.75  // Scales down the holding current from run current
 
   /**
    * Interpolate microsteps to 256
@@ -2633,22 +2633,22 @@
    */
   #define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD     100  // [mm/s]
-  #define X2_HYBRID_THRESHOLD    100
-  #define Y_HYBRID_THRESHOLD     100
-  #define Y2_HYBRID_THRESHOLD    100
-  #define Z_HYBRID_THRESHOLD       3
-  #define Z2_HYBRID_THRESHOLD      3
-  #define Z3_HYBRID_THRESHOLD      3
-  #define Z4_HYBRID_THRESHOLD      3
-  #define E0_HYBRID_THRESHOLD     30
-  #define E1_HYBRID_THRESHOLD     30
-  #define E2_HYBRID_THRESHOLD     30
-  #define E3_HYBRID_THRESHOLD     30
-  #define E4_HYBRID_THRESHOLD     30
-  #define E5_HYBRID_THRESHOLD     30
-  #define E6_HYBRID_THRESHOLD     30
-  #define E7_HYBRID_THRESHOLD     30
+  #define X_HYBRID_THRESHOLD     130  // [mm/s]
+  #define X2_HYBRID_THRESHOLD    130
+  #define Y_HYBRID_THRESHOLD     130
+  #define Y2_HYBRID_THRESHOLD    130
+  #define Z_HYBRID_THRESHOLD       9
+  #define Z2_HYBRID_THRESHOLD      9
+  #define Z3_HYBRID_THRESHOLD      9
+  #define Z4_HYBRID_THRESHOLD      9
+  #define E0_HYBRID_THRESHOLD     24
+  #define E1_HYBRID_THRESHOLD     24
+  #define E2_HYBRID_THRESHOLD     24
+  #define E3_HYBRID_THRESHOLD     24
+  #define E4_HYBRID_THRESHOLD     24
+  #define E5_HYBRID_THRESHOLD     24
+  #define E6_HYBRID_THRESHOLD     24
+  #define E7_HYBRID_THRESHOLD     24
 
   /**
    * Use StallGuard to home / probe X, Y, Z.
