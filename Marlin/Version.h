@@ -25,7 +25,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "26" 
+#define COMPILE_VERSION "27" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "(JAM)" // Who made the changes.
@@ -36,6 +36,10 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:MM 24HR
  * 
+ * V27 01/xx/2021 12:14
+ *      UPDATES: MARLIN upst4eam bugfix-2.0.x  01/19/2021
+ *  
+ *  
  * V26 01/16/2021 12:14
  *      UPDATES: MARLIN upst4eam bugfix-2.0.x  01/16/2021
  *      REMOVED: #define CASE_LIGHT_ENABLE
