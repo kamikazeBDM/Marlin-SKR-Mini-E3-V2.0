@@ -36,14 +36,26 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:MM 24HR
  * 
- * V27 01/xx/2021 xx:xx
- *      UPDATES: MARLIN upst4eam bugfix-2.0.x  01/19/2021
+ * V27 01/28/2021 11:35
+ *      UPDATES: MARLIN upst4eam bugfix-2.0.x  01/28/2021
+ *      #define MEATPACK 
+ *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.20, 80.35, 400, 95.00 }
+ *      #define DEFAULT_MAX_ACCELER ATION      { 900, 900, 125, 5000 }
+ *      #define DEFAULT_ACCELERATION          775    // X, Y, Z and E acceleration for printing moves
+ *      #define DEFAULT_RETRACT_ACCELERATION  775    // E acceleration for retracts
+ *      #define DEFAULT_TRAVEL_ACCELERATION   850    // X, Y, Z acceleration for travel (non printing) moves
+ *      #define JUNCTION_DEVIATION_MM 0.015 
+ * 
+ *      #define FAST_PWM_FAN_FREQUENCY 1287
  *  
- *  
+ *      REMOVED:    
+ *                  //#define HYBRID_THRESHOLD
+ *                  //#define SQUARE_WAVE_STEPPING
+ *      
  * V26 01/16/2021 12:14
  *      UPDATES: MARLIN upst4eam bugfix-2.0.x  01/16/2021
  *      REMOVED: #define CASE_LIGHT_ENABLE
- *      Sync'd settings frrom printer in to config.
+ *      Sync'd settings from printer in to config.
  * 
  * V25 12/20/2020 12:42
  *      UPDATES: MARLIN upstream bugfix-2.0.x  12/20/2020
