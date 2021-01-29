@@ -25,7 +25,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "26" 
+#define COMPILE_VERSION "27" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "(JAM)" // Who made the changes.
@@ -36,6 +36,13 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:MM 24HR
  * 
+ * 
+ * V27 01/28/2021 17:40
+ *      CHAMGES:
+ *          Corrected Stepper Currents
+ *          M900 K0.04
+ *          M201 X700.00 Y700.00 Z100.00 E5000.00
+ *          M203 X700.00 Y700.00 Z12.00 E300.00
  * 
  * V26 01/28/2021 17:28
  *      ** RELODED: **  
