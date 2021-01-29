@@ -25,7 +25,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "26(clean)" 
+#define COMPILE_VERSION "26" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "(JAM)" // Who made the changes.
@@ -40,7 +40,7 @@
  * V26 01/28/2021 16:30
  *      ** RELODED: **  
  *          Fresh marlin code files, existing settings re-applied
- * 
+ *          Fixed NEO_PIXEL in .platformio
  *      CHANGED:
  *      #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.20, 80.35, 400, 95.00 }
  *      #define DEFAULT_MAX_ACCELER ATION      { 900, 900, 125, 5000 }
