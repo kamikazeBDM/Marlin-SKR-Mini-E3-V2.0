@@ -25,7 +25,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "27" 
+#define COMPILE_VERSION "28" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "(JAM)" // Who made the changes.
@@ -36,10 +36,20 @@
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:MM 24HR
  *
- * V28 01/xx/2021 xx:xx
- *      PIDTUNING:
+ * V28 02/21/2021 09:46
+ *      TUNING: SETTINGS:XFER:
  *          M301 P22.43 I2.20 D57.09
  *          M304 P206.21 I40.19 D705.45
+ *          M92 X80.29 Y80.29 Z400.00 E95.00
+ *          #define DEFAULT_MAX_FEEDRATE         { 300,  300,  5,   50 }
+ *          #define DEFAULT_MAX_ACCELERATION        { 2500, 2500, 100, 9999 }
+ *          #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
+ *          #define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+ *          #define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+ *          #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.29, 80.29, 400, 95.00 } 
+ *          M906 X708 Y708 Z900  
+ *          M906 T0 E708
+ *          M900 K0.04
  * 
  * V27 01/28/2021 17:47
  *      CHANGES:
