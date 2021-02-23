@@ -25,7 +25,7 @@
  * Marlin bugfix-2.0.x
  * Compiled version identifier
  ************************************/
-#define COMPILE_VERSION "28" 
+#define COMPILE_VERSION "29" 
 
 #define SHORT_BUILD_VERSION "bugfix-2.0.7.2-" COMPILE_VERSION
 #define STRING_CONFIG_H_AUTHOR "(JAM)" // Who made the changes.
@@ -35,6 +35,8 @@
 
 /*******************************************************************************************************
  * Vx  mm/dd/YYYY HH:MM 24HR
+
+ * V29 xx/xx/2021 xx:xx
  *
  * V28 02/21/2021 09:46
  *      TUNING: SETTINGS:XFER:
